@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница 2</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #fcfbf9;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20;
+        background: linear-gradient(to right, #e0d5ef, #e5c6d6);
+        align-items: center;
+    }
+    
+    h1 {
+        color: #6fa2e8;
+        font-size: 48px;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    nav a {
+        color: #eb85b3;
+        text-decoration: none;
+        margin-bottom: 10px;
+        padding-right: 40px;
+    }
+    
+    .content {
+    background: #fffedb;
+    padding: 20px;
+    border: 2px solid #e5d6f6;
+    height: 420px; 
+    overflow-y: auto; 
+    }
+    
+    h2 {
+        color: #eb85b3;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff9db;
+    }
+    
+    th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+    
+    footer {
+        padding: 20px;
+        background: #f6eceb;
+        font-size: 20px;
+    }
+    
+    footer span {
+        color: #72bc72;
+    }
+    footer .footer1 {
+        color:#AAA1CE;
+    }
+    footer .footer2 {
+        color:#72C797;
+    }
+    footer .footer3 {
+        color:#82C0E7;
+    }
+    footer .footer4 {
+        color:#EEAF78;
+    }
+</style>
+
+
+</head>
+<body>
+    <header>
+        <h1>NAME</h1>
+        <nav>
+            <a href="#">Ссылка</a>
+            <a href="#">Ссылка</a>
+        </nav>
+    </header>
+    <section class="content">
+        <h2>TIER LIST</h2>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ФИО</th>
+                    <th>Дата рождения</th>
+                    <th>Курс</th>
+                    <th>Группа</th>
+                    <th>Сред. балл</th>
+                    <th>Оценка</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <script>
+            const databaseData = [
+            { id: 123456789, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            { id: 1, name: "Малёнкин Захар Олегович", birthdate: "14.02.2007", year: 1, group: 8, average: 7.5, rating: "B" },
+            ];
+    
+            const tableBody = document.querySelector("#data-table tbody");
+            
+    
+            databaseData.forEach(entry => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                <td>${entry.id}</td>
+                <td>${entry.name}</td>
+                <td>${entry.birthdate}</td>
+                <td>${entry.year}</td>
+                <td>${entry.group}</td>
+                <td>${entry.average}</td>
+                <td>${entry.rating}</td>
+            `;
+             tableBody.appendChild(row);
+            });
+        </script> 
+    </section>   
+    <footer>
+        <span class="footer1">FOOTER FOOTER</span> <span class="footer2">FOOTER</span> <span class="footer3">FOOTER</span> <span class="footer4">FOOTER</span>
+    </footer>
+</body>
+</html>
